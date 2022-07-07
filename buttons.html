@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.container{
+			margin-top: 360px;
+			text-align: center;
+		}
+		.btn{
+			font-size: 20px;
+			padding: 10px 20px;
+			margin: 10px;
+			font-family: montserrat;
+			border: 1px solid #348adb;
+			cursor: pointer;
+			transition: 0.8s;
+			position: relative;
+			overflow: hidden;
+			background: none;
+
+		}
+		.btn1,.btn2{
+			color: #3498db;
+		}
+		.btn1:hover,.btn2:hover{color: #fff;}
+		.btn3,.btn4{color: #fff;}
+		.btn::before{
+			content: "";
+			background: #348adb;
+			width: 100%;
+			height: 0%;
+			z-index: -1;
+			position: absolute;
+			left: 0;
+			transition: 0.8s;
+		}
+		.btn1::before,.btn3::before{
+			top: 0;
+			border-radius: 0 0 50% 50%;
+		}
+		.btn2::before,.btn4::before{
+			bottom: 0;
+			border-radius: 50% 50% 0 0;
+		}
+		.btn3::before,.btn4::before{height: 180%;}
+		.btn1:hover::before,.btn2:hover::before{
+			height: 180%;
+		}
+		.btn3:hover::before,.btn4:hover::before{
+			height: 0%;
+		}
+		.btn3:hover,.btn4:hover{color: #3498db;}
+		/*I wanna do stylings for button 1 with only transition*/
+		/*.btn1:hover{
+			width: 150px;
+			padding: 0;
+			margin: 0;
+			background: #ad64ef;
+			opacity: 1;
+			color: #2054ab;
+			font-size: 130%;
+			font-style: italic;
+			font-weight: bolder;
+			font-family: cursive;
+			transition: width 2s, padding 2s, margin 2s, opacity 1s,font-family 2s,;
+			/*applying transitions to specific properties has failed*/
+		}
+		/*.btn2:hover{
+			width: 150px;padding: 0; margin: 0; height: 80px; background: #ad64ef; color: #fff; opacity: 1.0; border-radius: 80px; animation: secondHover 2s infinite ;
+		}
+		@keyframes secondHover{
+
+			0%{text-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.8); background-image: background-color: red; color: white;}
+			40%{background-color: pink;}
+			60%{background-color: #eaffae;}
+			80%{background-color: black;}
+			100%{background-color: navy; transform: 2s rotateZ(360deg);}
+		}
+		.btn3:hover, .btn4:hover{
+			width: 150px;
+			height: 80px;
+			border-radius: 100px;
+			background-color: black;
+			color: white;
+			opacity: 1.0;
+			transition: 1s ease-out ;
+		}*/
+		/*Conclusions:  I have to learn about transitions and annimations in depth.*/
+
+
+
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<button class="btn btn1">Hover Me</button>
+	<button class="btn btn2">Hover Me</button>
+	<button class="btn btn3">Hover Me</button>
+	<button class="btn btn4">Hover Me</button>
+</div>
+</body>
+</html>
